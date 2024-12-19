@@ -5,7 +5,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 
-namespace RegIN.Elements
+namespace RegIN_Lipina.Elements
 {
 
     public partial class ElementCapture : UserControl
@@ -83,13 +83,19 @@ namespace RegIN.Elements
                     Margin = new Thickness(ElementWidth / 2 - 60 + i * 30, ThisRandom.Next(-10, 10), 0, 0)
                 };
                 StrCapture += back.ToString();
+                Capture.Children.Add(LCode);
+            }
+        }
+        #endregion
+
+
         public bool OnCapture()
         {
             return StrCapture == InputCapture.Text;
         }
         private void EnterCapture(object sender, KeyEventArgs e)
         {
-            if (InputCapture.Text.Length == 4
+            if (InputCapture.Text.Length == 4)
                 if (!OnCapture())
                     CreateCapture();
                 else if (HandlerCorrectCapture != null)
