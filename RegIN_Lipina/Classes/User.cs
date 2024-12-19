@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Documents;
 
-namespace RegIN_Lipna.Classes
+namespace RegIN_Lipina.Classes
 {
     public class User
     {
