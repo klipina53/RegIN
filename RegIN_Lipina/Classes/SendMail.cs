@@ -14,12 +14,12 @@ namespace RegIN_Lipina.Classes
 
                 Port = 587,
 
-                Credentials = new NetworkCredential("yandex@yandex.ru", "password"),
+                Credentials = new NetworkCredential("L9504609974l@yandex.ru", "xmzwxiclmxivlpjw"),
 
                 EnableSsl = true,
             };
 
-            smtpClient.Send("landaxer@yandex.ru", To, "Проект RegIn", Message);
+            smtpClient.Send("L9504609974l@yandex.ru", To, "Проект lipina325", Message);
         }
     }
 }
