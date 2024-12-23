@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -28,7 +29,7 @@ namespace RegIN_Lipina.Pages
 
         public int Code = 0;
 
-        public Confirmation(TypeConfirmation TypeConfirmation)
+        public Coniformation(TypeConfirmation TypeConfirmation)
         {
             InitializeComponent();
 
@@ -41,7 +42,7 @@ namespace RegIN_Lipina.Pages
 
             Code = new Random().Next(100000, 999999);
 
-            Classes.SendMail.SendMessage($"Login code: {Code}", MainWindow.mainWindow.userLogin.Login);
+            Classes.SendMail.SendMessage($"Login code: {Code}", MainWindow.mainWindow.UserLogIn.Login);
 
             Thread TSendMailCode = new Thread(TimerSendMailCode);
 
@@ -91,7 +92,7 @@ namespace RegIN_Lipina.Pages
                 else
                 {
 
-                    MainWindow.mainWindow.userLogin.SetUser();
+                    MainWindow.mainWindow.UserLogIn.SetUser();
 
                     MessageBox.Show("Регистрация пользователя успешно подтверждена.");
 

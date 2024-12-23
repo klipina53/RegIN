@@ -72,7 +72,10 @@ namespace RegIN_Lipina.Pages
 
         public void InCorrectLogin()
         {
-            if (LNameUser.Content != "")
+            if (LNameUser.Content == "")
+            {
+            }
+            else
             {
                 LNameUser.Content = "";
                 DoubleAnimation StartAnimation = new DoubleAnimation();
@@ -122,7 +125,7 @@ namespace RegIN_Lipina.Pages
                 {
                     if (MainWindow.mainWindow.UserLogIn.Password == TbPassword.Password)
                     {
-                        MainWindow.mainWindow.OpenPage(new Confirmation(Confirmation.TypeConfirmation.Login));
+                        MainWindow.mainWindow.OpenPage(new Coniformation(Coniformation.TypeConfirmation.Login));
                     }
                     else
                     {
@@ -192,5 +195,24 @@ namespace RegIN_Lipina.Pages
             MainWindow.mainWindow.OpenPage(new Recovery());
         private void OpenRegin(object sender, MouseButtonEventArgs e) =>
     MainWindow.mainWindow.OpenPage(new Regin());
+        private void SetLogin(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                MainWindow.mainWindow.UserLogIn.GetUserLogin(TbLogin.Text);
+                if (TbPassword.Password.Length > 0)
+            SetPassword();
+            }
+        }
+
+        private void SetLogin(object sender, RoutedEventArgs e)
+        {
+         
+                MainWindow.mainWindow.UserLogIn.GetUserLogin(TbLogin.Text);
+                if (TbPassword.Password.Length > 0)
+                    SetPassword();
+        }
+
+
     }
 }

@@ -32,7 +32,7 @@
                     Margin="32"
                     VerticalAlignment="Top"
                     Width="100"
-                    Source="/RegIN;component/Images/ic-user.png">
+                    Source="C:\Users\student-a502\Source\Repos\RegIN\RegIN_Lipina\Images\ic-user.png">
 
                     <Image.Clip>
                         <EllipseGeometry

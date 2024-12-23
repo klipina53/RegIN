@@ -19,7 +19,7 @@
     <Grid>
         <materialDesign:Card Height="304" VerticalAlignment="Center" HorizontalAlignment="Center" Width="307">
             <Grid>
-                <Image HorizontalAlignment="Center" Height="100" Margin="32" VerticalAlignment="Top" Width="100" Source="/RegIn_Тепляков;component/Images/ic-mail.png">
+                <Image HorizontalAlignment="Center" Height="100" Margin="32" VerticalAlignment="Top" Width="100" Source="C:\Users\student-a502\Source\Repos\RegIN\RegIN_Lipina\Images\ic-mail.png">
                     <Image.Clip>
                         <EllipseGeometry RadiusX="50" RadiusY="50" Center="50,50"/>
                     </Image.Clip>

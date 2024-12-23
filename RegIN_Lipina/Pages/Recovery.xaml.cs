@@ -131,6 +131,11 @@ namespace RegIN_Lipina.Pages
                     MainWindow.mainWindow.UserLogIn.CrateNewPassword();
                 }
         }
+        public void SetNotification(string Message, SolidColorBrush _Color)
+        {
+            LNameUser.Content = Message;
+            LNameUser.Foreground = _Color;
+        }
         private void OpenLogin(object sender, MouseButtonEventArgs e)
         {
             MainWindow.mainWindow.OpenPage(new Login());
